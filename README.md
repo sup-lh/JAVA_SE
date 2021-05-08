@@ -2938,33 +2938,32 @@ true
    
 ```java
 
-    package com.suplin;
+package com.suplin;
 
-    /**
-    * @author 林一
-    * @data 2021/4/28
-    */
-    public class Test {
+/**
+* @author 林一
+* @data 2021/4/28
+*/
+public class Test {
 
-        public static void main(String[] args) {
-            Father father1 = new Father("抽");
-            Father father2 = new Father("抽烟");
-            System.out.println(father1.equals(father2));
+public static void main(String[] args) {
+    Father father1 = new Father("抽");
+    Father father2 = new Father("抽烟");
+    System.out.println(father1.equals(father2));
 
 
-            Son son1 = new Son("抽烟");
-            Son son2 = new Son("抽烟");
-            System.out.println(son1.equals(son2));
-        }
+    Son son1 = new Son("抽烟");
+    Son son2 = new Son("抽烟");
+    System.out.println(son1.equals(son2));
+}
 
-    }
+}
+```
 
-   ```
-
-   ```cmd
-    false
-    true
-   ```
+```cmd
+false
+true
+```
 
 ### toString 和 hashCode
 
@@ -3018,7 +3017,7 @@ true
         void eat();
 
     }
-  ```
+```
   
 ```java
 
@@ -3032,21 +3031,21 @@ true
           System.out.println("猫在吃鱼")
       }
   }
-  ```
+```
   
 ```java
 
-  public class Dog implements Animal(){
-      @Override
-      public void breathe(){
-          System.out.println("狗用鼻子呼吸")
-      }
-      @Override
-      public void eat(){
-          System.out.println("狗在吃草")
-      }
-  }
-  ```
+public class Dog implements Animal(){
+@Override
+public void breathe(){
+  System.out.println("狗用鼻子呼吸")
+}
+@Override
+public void eat(){
+  System.out.println("狗在吃草")
+}
+}
+```
   
 ```java
 
@@ -3056,7 +3055,7 @@ true
         Animal animal = new Dog();
         animal.eat();
     }
-  ```
+```
 
 
 ### 超级数组 和 超级链表 实现多态
@@ -3579,7 +3578,7 @@ FILO(first in last out) -----> 栈
         }
     }
 
-  ```
+```
 
 - Stack
   
@@ -4309,81 +4308,78 @@ public class NewInt {
         }
     }
 
-  ```
+```
 
 - MyThread
   
 ```java
+package com.Thread;
 
-    package com.Thread;
+/**
+* @author 林一
+* @data 2021/5/3
+*/
+public class MyThread extends Thread{
+public MyThread() {
+}
 
-    /**
-    * @author 林一
-    * @data 2021/5/3
-    */
-    public class MyThread extends Thread{
-        public MyThread() {
-        }
+public MyThread(String name) {
+    super(name);
+}
 
-        public MyThread(String name) {
-            super(name);
-        }
-
-        @Override
-        public void run(){
-            while (true){
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("我是: " + Thread.currentThread().getName());
-            }
-        }
-    }
-
-  ```
+@Override
+public void run(){
+    while (true){
+	try {
+	    Thread.sleep(1000);
+	} catch (InterruptedException e) {
+	    e.printStackTrace();
+	}
+	System.out.println("我是: " + Thread.currentThread().getName());
+}
+}
+}
+```
 
 - ThreadTest
   
 ```java
 
-    package com.Thread;
+package com.Thread;
 
-    import com.Thread.MyRun;
-    import com.Thread.MyThread;
+import com.Thread.MyRun;
+import com.Thread.MyThread;
 
-    /**
-    * @author 林一
-    * @data 2021/5/3
-    *
-    * 电脑里面会有很多应用程序,一个程序就是一个进程
-    * 一个进程里面可以包含很多线程
-    */
-    public class ThreadTest {
-        public static void main(String[] args) {
+/**
+* @author 林一
+* @data 2021/5/3
+*
+* 电脑里面会有很多应用程序,一个程序就是一个进程
+* 一个进程里面可以包含很多线程
+*/
+public class ThreadTest {
+public static void main(String[] args) {
 
-            Thread t1 = new MyThread("一号线程");
-            t1.start();
+    Thread t1 = new MyThread("一号线程");
+    t1.start();
 
-            Thread t2 = new Thread(new MyRun(),"Run线程");
-            t2.start();
+    Thread t2 = new Thread(new MyRun(),"Run线程");
+    t2.start();
 
 
 
-            while (true){
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("我是: " + Thread.currentThread().getName());
-            }
-
-        }
+    while (true){
+	try {
+	    Thread.sleep(1000);
+	} catch (InterruptedException e) {
+	    e.printStackTrace();
+	}
+	System.out.println("我是: " + Thread.currentThread().getName());
     }
 
-  ```
+}
+}
+```
 
 ## 安全问题
 - ![](./anquanwenti.jpg)
@@ -4452,7 +4448,8 @@ public class NewInt {
     }
 
 ```
-  - 然后,如果继承的List 下面的`Vector`这个子类,则不会出错,他会让线程有顺序的执行
+
+- 然后,如果继承的List 下面的`Vector`这个子类,则不会出错,他会让线程有顺序的执行
     - ThreadTest
     
 ```java
@@ -4496,8 +4493,8 @@ public class NewInt {
 
 ```
 
-  - 原因:
-    - 在类似`Vector`类里面,他的方法前有一个`synchronized` ,它可以让线程有序进行
+- 原因:
+  - 在类似`Vector`类里面,他的方法前有一个`synchronized` ,它可以让线程有序进行
 
 - HashMap 也不是线程安全的,但是 Hashtable是线程安全的
 
@@ -4528,7 +4525,7 @@ public class NewInt {
     } catch (InterruptedException e) {
         e.printStackTrace();
     }
-  ```
+```
 
 # 流(IO in&out)---Stream
 - 按照流向划分,可以分成输入流和输出流,其流向是相对于程序来说的
@@ -4873,31 +4870,29 @@ public class Writer {
 ### 序列化
 - 要在需要写入的对象后面实现`Serializable` 的接口,才能 序列化
 - User
-  
 ```java
 
-    package com.IOtest;
+package com.IOtest;
 
-    import java.io.Serializable;
+import java.io.Serializable;
 
-    /**
-    * @author 林一
-    * @data 2021/5/4
-    */
-    public class User implements Serializable {
-        private String Username;
+/**
+* @author 林一
+* @data 2021/5/4
+*/
+public class User implements Serializable {
+private String Username;
 
 
-        public String getUsername() {
-            return Username;
-        }
+public String getUsername() {
+    return Username;
+}
 
-        public void setUsername(String username) {
-            Username = username;
-        }
-    }
-
-  ```
+public void setUsername(String username) {
+    Username = username;
+}
+}
+```
 
 - IOtest
   
@@ -4929,7 +4924,7 @@ public class Writer {
             oos.close();
         }
     }
-  ```
+```
 
 ### 反序列化
 
