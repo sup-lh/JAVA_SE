@@ -9,6 +9,7 @@
     }
     }
     ```
+    
     - 该Java文件的文件路径在 ：C:\Users\Hadoop\Desktop\The_one_java\src\java_text
     - ![](./lujin.jpg)
 - 命令行 ----> 执行编译：
@@ -314,11 +315,13 @@ class Int{
     }
     }
 ```
+
 ```cmd
 *****
 0
 1
 ```
+
 好像上面的代码有点毛病,但我实践是这样,跟教程居然不同,我裂开<br>
 -- 的用法跟上面一样
 
@@ -360,6 +363,7 @@ class Boolean{
     }
     }
 ```
+
 ```cmd
 *****
 false
@@ -440,7 +444,7 @@ true
 - condition ? result1 : result2<br>
 条件 ? true返回值1 : false返回值2
 
-    - ```java
+  -  ```java
       class Sanmu{
         public static void main(String args[]){
             System.out.println("*****");
@@ -449,8 +453,9 @@ true
             System.out.println(res);
         }
         }
-      ```
-    - ```cmd
+    ```
+      
+  - ```cmd
       *****
       7
       ```
@@ -573,8 +578,8 @@ Scanner scanner = new Scanner(System.in);
 int a = scanner.nextInt();;
 System.out.println(a);
 
-
 ```
+
 - String
 
 ```java
@@ -677,6 +682,7 @@ class While{
     }
     
 ```
+
 ```cmd
 1
 2
@@ -723,6 +729,7 @@ class For{
     }
 }
 ```
+
 - 双重for循环
     ```java
     for (int i = 0; i < 4; i++){
@@ -732,6 +739,7 @@ class For{
         }
     }
     ```
+
 - 打印直三角形
     ```java
     class For{
@@ -747,6 +755,7 @@ class For{
         }
     }
     ```
+
 - 九九乘法表
     ```java
     class For{
@@ -762,6 +771,7 @@ class For{
     }
     }
     ```
+
 - 打印反面直三角形
     ```java
     class For{
@@ -826,8 +836,8 @@ public static void main(String args[]){
     // 先定义,后初始化
     int[] nums;
     nums = new int[3]
-    
     ```
+
 - 数组性质:
     - 初始化数组后,默认为 0
     - 不能定义超过长度的下标(不能多定义)
@@ -857,6 +867,7 @@ for (int i = 1;i < nums.length;i++){
 }
 System.out.println(max);
 ```
+
 ## 迭代找下标
 ```java
 int[] nums = {2,3,4,5,6,7};
@@ -867,6 +878,7 @@ for (int i = 0;i < nums.length;i++){
     }
 }
 ```
+
 ## 元素替换
 ```java
 int[] nums = {1,2,3,4,5,6}
@@ -937,6 +949,7 @@ class Xuanze{
     }
 }
 ```
+
 > 即一轮一轮的找出最小值,依次放在前面
 
 
@@ -979,6 +992,7 @@ class Maopao{
     }
 }
 ```
+
 > 即一轮一轮的找出最大值,依次放在后面
 
 ## 插入排序
@@ -1230,6 +1244,7 @@ public class YuanGongAge {
             System.out.println(i);
         }
      ```
+
 - 普通for循环好处:可以拿到下标
 
 # 方法
@@ -1258,6 +1273,7 @@ public static void sort(int[] data){
     }
 }
 ```
+
 - 使用:
 ```java
 // user 是实参
@@ -1518,6 +1534,7 @@ public class Text {
 
 
 # 英雄小游戏
+
 ```java
 import java.util.Scanner;
 
@@ -1701,6 +1718,7 @@ public class HeroGame {
           }
       }
   ```
+
   - Dog.java
   ```java
   package com.suplin;
@@ -1726,6 +1744,7 @@ public class HeroGame {
   }
 
   ```
+
   - Family.java
   ```java
   package com.suplin;
@@ -1763,11 +1782,14 @@ public class HeroGame {
           return a;
       }
   }
+
   ```
+
   - 内存图
     ![](./shizhan.jpg)
 
 ### 引用传递 和 值传递
+
 - 先看代码:
 ```java
 package com.supyi;
@@ -1828,6 +1850,8 @@ public class Zhi {
 }
 
 ```
+
+
 - 会发现,数组进行了排序,打印数组,则是变化了的数组
 - 但是,将 a+b 赋值给 a , 打印a,a却还是原来的那个值
 -
@@ -1841,6 +1865,7 @@ public class Zhi {
 ### 成员变量 和 局部变量
 
 - 成员变量 ,如 属性 一旦设置了 便有一个默认值:如下
+
 ```java
 package com.suplin;
 
@@ -1970,6 +1995,7 @@ false
 
   ```
 
+
 内存分析展示(count = 3) 简单版
 ![](./yazhan.jpg)
 
@@ -2027,6 +2053,7 @@ public class Car {
 }
 
 ```
+
 ```cmd
 启动
 出发
@@ -2187,6 +2214,7 @@ public class Girl {
 ```
 
 - 如何使用:
+
 ```java
 package text1;
 
@@ -2217,6 +2245,7 @@ public class Meet {
 }
 
 ```
+
 - 包之间的结构
   
 ![](./baojiegou.jpg)
@@ -2261,6 +2290,7 @@ int num = Integer.parseInt("333")
 
 ### 包装超级数据
 ![](./chaojishuju.jpg)
+
 - SuperArray
 ```java
 package com.suplin;
@@ -2435,6 +2465,7 @@ public class Father {
 }
 
 ```
+
 - Son
 ```java
 /**
@@ -2449,6 +2480,7 @@ public class Son extends Father{
 }
 
 ```
+
 - Test
 ```java
 /**
@@ -2483,10 +2515,12 @@ public class test {
       System.out.println("我爱抽雪茄");
   }
   ```
+
 - 在test里```son.smoke();```则不会出现父代的`smoke`方法,输出为
   ```cmd
   我爱抽雪茄
   ```
+
 - 内存分析
 ![](./chongxie.jpg)
 
@@ -2495,17 +2529,21 @@ public class test {
   ```java
   super.smoke();
   ```
+
 - 为了验证子类在继承父类时,调用了父类的空参构造,这样
 - Father
+  
 ```java
 public Father() {
     System.out.println("构造了空参构造");
 }
 ```
+
 - test
 ```java
 Son son =new Son();
 ```
+
 - cmd
 ```cmd
 构造了空参构造
@@ -2535,6 +2573,7 @@ public Son(){
     super("***")
 }
 ```
+
 > 且这个 父类构造器 必须第一行首先构造父类
 
 > this 指向自己<br>
@@ -2549,6 +2588,7 @@ public Son(){
   - ![](./wenjianjiegou.jpg)
 
 - ClassFather
+
 ```java
 package com.suplin;
 
@@ -2582,7 +2622,9 @@ public class ClassFather {
 }
 
 ```
+
 - ClassSon
+  
 ```java
 package com.suplin;
 
@@ -2618,6 +2660,7 @@ public class ClassSon extends ClassFather {
 }
 
 ```
+
 - Test
 ```java
 package com.suplin;
@@ -2633,6 +2676,7 @@ public class Test {
     }
 }
 ```
+
 ```cmd
 这是父类静态属性
 这是父类静态代码块
@@ -2836,7 +2880,9 @@ true
 ### 超级数组 和 超级链表 实现多态
 #### 实现多态
 ![](./chaojijiegou.jpg)
+
 - Node(链表------数据结构)
+  
 ```java
 /**
  * @author 林一
@@ -2887,9 +2933,10 @@ public class Node {
                 '}';
     }
 }
-
 ```
+
 - Super
+  
 ```java
 /**
  * @author 林一
@@ -2907,7 +2954,9 @@ public interface Super<T> {
 
 }
 ```
+
 - SuperArray
+
 ```java
 /**
  * @author 林一
@@ -3384,46 +3433,48 @@ FILO(first in last out) -----> 栈
 4. 如果报红,就alt + enter 导包
 5. 例如:
 - ![](./lianxit.jpg)
-    - Exercise
-    ```java
-     package com.suplin;
- 
-     import org.junit.Test;
- 
-     /**
-     * @author 林一
-     * @data 2021/5/2
-     */
-     public class Exercise {
-         @Test
-         public void Test(){
-             System.out.println("练习");
-         }
- 
-     }
- 
-    ```
-    - TestExercise
-    ```java
-    package com.test;
 
-    import com.suplin.Exercise;
+- Exercise
+```java
+    package com.suplin;
+
     import org.junit.Test;
 
     /**
     * @author 林一
     * @data 2021/5/2
     */
-    public class ExerciseTest {
-
+    public class Exercise {
         @Test
-        public void func(){
-            Exercise exercise = new Exercise();
-            exercise.Test();
+        public void Test(){
+            System.out.println("练习");
         }
+
     }
 
-    ```
+```
+
+- TestExercise
+```java
+package com.test;
+
+import com.suplin.Exercise;
+import org.junit.Test;
+
+/**
+* @author 林一
+* @data 2021/5/2
+*/
+public class ExerciseTest {
+
+    @Test
+    public void func(){
+        Exercise exercise = new Exercise();
+        exercise.Test();
+    }
+}
+
+```
 
 # 集合
 
@@ -3602,8 +3653,12 @@ list
 - 冒泡排序时间复杂度:O(n²)
 - 当前时间: `long start = System.currentTimeMillis();`
 - 最快排序(跑满cpu): `list = list.parallelStream().sorted(Comparator.comparingInt(a -> a)).collect(Collectors.toList());`
+
+
 ## 进入正轨
+
 - 折半查找-----版本一:
+  
 ```java
 package com.suplin;
 
@@ -3667,7 +3722,9 @@ public class BinarySearch {
 }
 
 ```
+
 - 折半查找-----版本二:
+  
 ```java
 package com.suplin;
 
@@ -3962,6 +4019,7 @@ public class NewInt {
 两种方法实现
 1. 继承Thread类
 2. 实现Runnable接口
+
 ![](./xiancheng.jpg) 
 - MyRun
   ```java
@@ -4600,6 +4658,7 @@ public void objectTest() throws IOException, ClassNotFoundException {
   - 一个网卡一个ip地址
 - 端口
   - 一个电脑有65536个端口
+  
 ![](./jianting.jpg)
 - QQServer
   ```java
@@ -4683,6 +4742,7 @@ public void objectTest() throws IOException, ClassNotFoundException {
 - 泛型设计原则:只要在编译的时候没有报错,那么在运行时就不会出现ClassCastException
 - <数据类型> ---> 只能是引用类型
 ## 泛型方法
+
 ```java
 package com.fanxing;
 
@@ -4704,11 +4764,15 @@ public class Test {
 }
 
 ```
+
+
 ## 泛型类派生的子类
 - 如果明确了泛型类型,则只需要在继承时的父类后面写上泛型类型
   - `public class Person implements Animal<String>{}`
+  
 - 如果没有明确类型,那么需要在子类和父类的后面都写生形参
   - `public class Person<T> implements Animal<T>{}`
+
 ## 泛型通配符
 - ? 可以代表任意类型
   - <?>
