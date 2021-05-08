@@ -2,14 +2,14 @@
 # HelloWorld
 - 编写：
     - 
-    ``` java
+``` java
     class HelloWorld{
     public static void main(String args[]){
         System.out.println("HelloWorld");
     }
     }
-    ```
-    
+```
+
     - 该Java文件的文件路径在 ：C:\Users\Hadoop\Desktop\The_one_java\src\java_text
     - ![](./lujin.jpg)
 - 命令行 ----> 执行编译：
@@ -46,22 +46,32 @@ main为入口方法，不能换成其他的名字|
 ## 注释
 
 - 单行注释：
-    - ```java
+  
+    -  
+```java
+
         // 注释内容（双斜杠后有一空格）
+```
 
 - 多行注释：
-    - ```java
+    -  
+```java
+
         /*
          * 1.举行典礼
          * 2.宣讲内容
          */
+```
 
 - 文档类型注释：
-    - ```java
+    - 1
+```java
+
         /**
          *author:suplin
          *time:2021/4/15 18:19
          */
+```
 
 ## 变量
 > 变量是指向某一块内存区域的引用
@@ -103,7 +113,9 @@ main为入口方法，不能换成其他的名字|
 
 > 引用网页内容：
 
+
 ```md
+
 java四类八种基本数据类型
     第一类：整型 byte short int long 
     第二类：浮点型 float double
@@ -146,7 +158,9 @@ long -> double
 ## 开聊byte类型：
 - 二进制范围：
 
+
 ```md
+
 内存里不能放负数，所以规定：
 0开头为正数，1开头为负数（开头的数字代表正负，就不同算进去了）
 
@@ -166,7 +180,9 @@ long -> double
 
 - 原码 ， 补码 ， 反码
 
+
 ```md
+
 1 是多少： 00000001
 -1 是多少：10000001
 那 1 + （-1） = 0 的话
@@ -175,7 +191,9 @@ long -> double
 
 - 原码概念：
 
+
 ```md
+
 正数的 反码 ，  补码 都是本身
 负数：
 反码：除了第一个符号位，其余取反
@@ -194,7 +212,9 @@ long -> double
 
 - 用补码计算范围：
 
+
 ```md
+
 -126 的原码为 11111110
        反码为 10000001
        补码为 10000010
@@ -208,7 +228,9 @@ so 范围为 -128  ---  127
 
 - 其他整型的范围：
 
-```md 
+
+```md
+ 
 short :
  01111111111111111   到1000000000000000
 也就是： -2的负15次方 到 2的正15次方-1
@@ -237,7 +259,9 @@ long:
 而  110 = 6
 ```
 
+
 ```md
+
 浮点型范围：
 因为 规定 全零 和 全一 不表示
 所以 范围为： 1-254
@@ -247,13 +271,17 @@ long:
 
 ```
 
+
 ```md
+
 -126 --- 127  为补码
 全加127
 1 --- 254   为移码
 ```
 
+
 ```md
+
 正数最小值为：1.000000000……*2^-126    （即向左移动） 即 000000……1
 正数最大值为：1.111111111……*2^127
 ```
@@ -296,7 +324,11 @@ long:
 ```
 
 - ++
+
+
 ```java
+
+
 /*
  * num+ 即 num = 1
  * ++ 在后面:先 打印 num 后 num + 1
@@ -333,11 +365,13 @@ class Int{
 
 运算结果为: true 或者 false
 
-```
+```java
 & | ! ^ && || > < >= <= == !=
 ```
 
+
 ```java
+
 /*
  *分别打印
  *与(一假为假)  0&0=0  ;  0&1=0  ;  1&0=0  ;  1&1=1  ，
@@ -373,7 +407,9 @@ true
 ```
 
 借鉴网络
+
 ```md
+
 设真值为1，假值为0（true = 1, false = 0）。
 
 与运算符：
@@ -445,6 +481,7 @@ true
 条件 ? true返回值1 : false返回值2
 
   -  ```java
+
       class Sanmu{
         public static void main(String args[]){
             System.out.println("*****");
@@ -453,15 +490,17 @@ true
             System.out.println(res);
         }
         }
-    ```
+```
       
   - ```cmd
       *****
       7
-      ```
+  ```
 
 ## 位移运算符
+
 ```md
+
 java中有三种移位运算符
 
 <<      :     左移运算符，num << 1,相当于num乘以2
@@ -480,6 +519,7 @@ java中有三种移位运算符
 
 - 运算下运算下:
     - ```java
+
       class Weiyi{
         public static void main(String args[]){
             System.out.println("*****");
@@ -489,12 +529,13 @@ java中有三种移位运算符
 
         }
         }
-      ```
+  ```
     
     - ```md
+
       *****
       4
-      ```
+  ```
 
     - 00000001 向左移动两位,即 00000100<br>
     00000100 即 2^2 即 4
@@ -521,7 +562,9 @@ java中有三种移位运算符
 ![](./gaowei.jpg)
 
 - 例
+
 ```java
+
 
 class Weiyi{
     public static void main(String args[]){
@@ -536,7 +579,9 @@ class Weiyi{
 
 ```
 
+
 ```md
+
 *****
 -127
 ```
@@ -549,7 +594,9 @@ class Weiyi{
 > 整数型（int，byte，short，long）变量之间相互间进行逻辑运算或算术运算，结果默认为 int 类型<br>但是long + 任何整数型都为long<br>
 若想运算成功，则需要在结果前加整型数据类型<br>数据相互运算则可直接运算
 
-	```java
+	
+```java
+
 	short s = 12;
 	byte b = 12;
 	short q = (short)(s+b);
@@ -570,7 +617,9 @@ class Weiyi{
 ## scanner 和 String
 
 - scanner
+
 ```java
+
 
 import java.util.Scanner;
 
@@ -582,7 +631,9 @@ System.out.println(a);
 
 - String
 
+
 ```java
+
 // String 使用的是双引号，char 使用的是单引号
 String b = "Hello" + " World";
 System.out.println(b);
@@ -591,7 +642,9 @@ System.out.println(b);
 
 ## if
 
+
 ```java
+
 import java.util.Scanner;
 
 
@@ -630,7 +683,9 @@ class If{
 
 
 ## switch
+
 ```java
+
 import java.util.Scanner;
 
 class If{
@@ -653,7 +708,9 @@ class If{
 ```
 
 ## while & do while
+
 ```java
+
 class While{
     public static void main(String args[]){
 
@@ -708,7 +765,9 @@ class While{
 ```
 
 ## for
+
 ```java
+
 class For{
     public static void main(String args[]){
 
@@ -731,17 +790,21 @@ class For{
 ```
 
 - 双重for循环
-    ```java
+    
+```java
+
     for (int i = 0; i < 4; i++){
         System.out.println("----第" + i + "次----");
         for (int j = 1;j <= 9;j++){
             System.out.println(j)
         }
     }
-    ```
+```
 
 - 打印直三角形
-    ```java
+    
+```java
+
     class For{
         public static void main(String args[]){
 
@@ -754,10 +817,12 @@ class For{
 
         }
     }
-    ```
+```
 
 - 九九乘法表
-    ```java
+    
+```java
+
     class For{
     public static void main(String args[]){
 
@@ -770,10 +835,12 @@ class For{
 
     }
     }
-    ```
+```
 
 - 打印反面直三角形
-    ```java
+    
+```java
+
     class For{
         public static void main(String args[]){
 
@@ -790,7 +857,7 @@ class For{
 
         }
     }
-    ```
+```
 
 ## 两个关键字
 关键字|差别
@@ -799,7 +866,9 @@ continue|直接跳出循环
 break|结束本次循环<br>继续下次循环
 
 - 代码块
+
 ```java
+
 class BreakContinue{
 public static void main(String args[]){
 
@@ -824,7 +893,9 @@ public static void main(String args[]){
 
 # 数组
 - 三种定义数组的方法:
-    ```java
+    
+```java
+
 
     // 初始化定义
     int[] nums = new int[3]
@@ -836,7 +907,7 @@ public static void main(String args[]){
     // 先定义,后初始化
     int[] nums;
     nums = new int[3]
-    ```
+```
 
 - 数组性质:
     - 初始化数组后,默认为 0
@@ -852,13 +923,17 @@ public static void main(String args[]){
 - int[][] num = new int[3][4]
 
 ## 迭代打印
+
 ```java
+
 for (int i = 0;i < nums.length;i++){
     System.out.println(nums[i]);
 }
 ```
 ## 迭代打印最大值
+
 ```java
+
 int max = nums[0];
 for (int i = 1;i < nums.length;i++){
     if (num[i] > max){
@@ -869,7 +944,9 @@ System.out.println(max);
 ```
 
 ## 迭代找下标
+
 ```java
+
 int[] nums = {2,3,4,5,6,7};
 // 查找 5 的下标
 for (int i = 0;i < nums.length;i++){
@@ -880,7 +957,9 @@ for (int i = 0;i < nums.length;i++){
 ```
 
 ## 元素替换
+
 ```java
+
 int[] nums = {1,2,3,4,5,6}
 int a = nums[2]
 nums[2] = nums[0]
@@ -889,7 +968,9 @@ nums[0] = a
 
 
 ## 数组反向排序
+
 ```java
+
 /**
  * @author 林一
  * @data 2021/4/25
@@ -913,7 +994,9 @@ public class Index {
 # 算法(选择,冒泡,插入)
 
 ## 选择排序
+
 ```java
+
 class Xuanze{
     public static void main(String args[]){
 
@@ -954,7 +1037,9 @@ class Xuanze{
 
 
 ## 冒泡排序
+
 ```java
+
 class Maopao{
     public static void main(String[] args){
         int[] nums = {34,14,5,32,12,54,1,11,33,12,3};
@@ -996,7 +1081,9 @@ class Maopao{
 > 即一轮一轮的找出最大值,依次放在后面
 
 ## 插入排序
+
 ```java
+
 class Charu{
     public static void main(String[] args){
         int[] nums = {34,14,5,32,12,54,1,11,33,12,3};
@@ -1057,7 +1144,9 @@ class Charu{
 
 # 第一阶段小项目
 
+
 ```java
+
 /*
  * time : 2021/4/21
  * author : Suplin
@@ -1236,14 +1325,16 @@ public class YuanGongAge {
 
 # 增强for循环
 - 例
-    - ```java
+    - 
+```java
+
         int arr = {1,2,3,4,5};
         (arr.iter 回车)
         for (int i : arr){
             (sout 回车)
             System.out.println(i);
         }
-     ```
+ ```
 
 - 普通for循环好处:可以拿到下标
 
@@ -1259,7 +1350,9 @@ public class YuanGongAge {
 
 - 方法跟main同级别
 - 无返回值
+
 ```java
+
                 // sort 是方法名  后面括号里面跟的叫做 形参  
 public static void sort(int[] data){
     for (int i = 0; i < data.length-1; i++){
@@ -1275,14 +1368,18 @@ public static void sort(int[] data){
 ```
 
 - 使用:
+
 ```java
+
 // user 是实参
 sout(user);
 ```
 
 - **return关键字**
 - 有返回值
+
 ```java
+
            // int 是返回值为 int     // arr 是形参
 public static int maxAge(int[] arr){
     int temp = arr[0];
@@ -1295,7 +1392,9 @@ public static int maxAge(int[] arr){
 }
 ```
 - 使用
+
 ```java
+
             // users 是实参
 int age = maxAge(users);
 System.out.println(age)
@@ -1303,7 +1402,9 @@ System.out.println(age)
 
 ## 改进第一阶段项目
 
+
 ```java
+
 /**
  * @author 林一
  * @data 2021/4/24
@@ -1535,7 +1636,9 @@ public class Text {
 
 # 英雄小游戏
 
+
 ```java
+
 import java.util.Scanner;
 
 /**
@@ -1652,7 +1755,9 @@ public class HeroGame {
   - 代码结构
   - ![](./tujiegou.jpg)
   - Girl.java
-  ```java
+  
+```java
+
       package com.suplin;
 
       /**
@@ -1720,7 +1825,9 @@ public class HeroGame {
   ```
 
   - Dog.java
-  ```java
+  
+```java
+
   package com.suplin;
 
   /**
@@ -1746,7 +1853,9 @@ public class HeroGame {
   ```
 
   - Family.java
-  ```java
+  
+```java
+
   package com.suplin;
 
   /**
@@ -1791,11 +1900,12 @@ public class HeroGame {
 ### 引用传递 和 值传递
 
 - 先看代码:
+
 ```java
+
 package com.supyi;
 
 /**
- * 
  * @author 林一
  * @data 2021/4/27
  */
@@ -1867,7 +1977,9 @@ public class Zhi {
 
 - 成员变量 ,如 属性 一旦设置了 便有一个默认值:如下
 
+
 ```java
+
 package com.suplin;
 
 /**
@@ -1967,7 +2079,9 @@ false
 > 通过压栈和弹栈来实现递归操作
 
 - 以斐波那契数列来举例
-  ```java
+  
+```java
+
     package com.supyi;
 
     /**
@@ -2021,7 +2135,9 @@ false
     - 类似于车的功能,例如它可以开动
 
 - 使用
+
 ```java
+
 /**
  * @author 林一
  * @data 2021/4/25
@@ -2116,17 +2232,23 @@ public class Car {
 ### 重载
 
 1. 方法名相同(重)
-   ```java
+   
+```java
+
    public Dog(){};
    public Dog(String name,int age){};
 
 2. 方法的参数类型，参数个不一样(重)
-   ```java
+   
+```java
+
    public Dog(String name,int age){};
    public Dog(String name,int age,int height){};
 
 3. 方法的返回类型可以不相同
-   ```java
+   
+```java
+
    public void print(){
        System.out.println("***")
    };
@@ -2134,13 +2256,17 @@ public class Car {
        return 1
    }
 4. 方法的修饰符可以不相同
-   ```java
+   
+```java
+
    public Dog(String name,int age){};
    private Dog(String name,int age,int height){};
 5. main 方法也可以被重载
 
 ### 完整的类
+
 ```java
+
 package text2;
 
 /**
@@ -2216,7 +2342,9 @@ public class Girl {
 
 - 如何使用:
 
+
 ```java
+
 package text1;
 
 import text2.Girl;
@@ -2268,7 +2396,9 @@ boolean|Boolean|
 > 在堆里面的包装类 比 基本数据类型多了一个值 ---->  null
 
 - 自动装拆箱
+
 ```java
+
 /*
  * 自动装箱
  * 将 基本数据类型 转换成 引用数据类型
@@ -2282,7 +2412,9 @@ int temp = num;
 ```
 
 - 包装类 的常见用法:
+
 ```java
+
 // 找出两个数中的最大值
 int max = Integer.max(2,5);
 // 字符串 转 int类型
@@ -2293,7 +2425,9 @@ int num = Integer.parseInt("333")
 ![](./chaojishuju.jpg)
 
 - SuperArray
+
 ```java
+
 package com.suplin;
 
 /**
@@ -2405,7 +2539,9 @@ public class SuperArray {
 ```
 
 - test
+
 ```java
+
 package com.suplin;
 
 /**
@@ -2442,7 +2578,9 @@ public class Test {
 ![](./jicheng.jpg)
 
 - Father
+
 ```java
+
 /**
  * @author 林一
  * @data 2021/4/28
@@ -2468,7 +2606,9 @@ public class Father {
 ```
 
 - Son
+
 ```java
+
 /**
  * @author 林一
  * @data 2021/4/28
@@ -2483,7 +2623,9 @@ public class Son extends Father{
 ```
 
 - Test
+
 ```java
+
 /**
  * @author 林一
  * @data 2021/4/28
@@ -2509,7 +2651,9 @@ public class test {
 ### 重写
 
 - 子类若想写一样的方法,则
-  ```java
+  
+```java
+
   // 这个是注解 
   @Override
   public void smoke(){
@@ -2527,21 +2671,27 @@ public class test {
 
 ### 子类构造
 - 为了在用了重写后任可以使用父类的方法 可以在方法前加super.(超类)
-  ```java
+  
+```java
+
   super.smoke();
   ```
 
 - 为了验证子类在继承父类时,调用了父类的空参构造,这样
 - Father
   
+
 ```java
+
 public Father() {
     System.out.println("构造了空参构造");
 }
 ```
 
 - test
+
 ```java
+
 Son son =new Son();
 ```
 
@@ -2557,11 +2707,13 @@ Son son =new Son();
 > 在用构造器的时候,其实调用了父类的构造<br>
 > 实际上在构造方法的时候调用了super ,被隐藏了罢了
 
-    ```java
+    
+```java
+
     public Son(){
         super();
     }
-    ```
+```
 
 > 在单独一个类的时候,写构造方法的时候,调用了顶级父类的构造(object)
 
@@ -2569,7 +2721,9 @@ Son son =new Son();
 > 因为 在写了有参构造的时候,无参构造会被覆盖<br>
 > 所以要让构造成功 就应该写上  **父类构造器**:
 
+
 ```java
+
 public Son(){
     super("***")
 }
@@ -2590,7 +2744,9 @@ public Son(){
 
 - ClassFather
 
+
 ```java
+
 package com.suplin;
 
 /**
@@ -2626,7 +2782,9 @@ public class ClassFather {
 
 - ClassSon
   
+
 ```java
+
 package com.suplin;
 
 import java.util.logging.FileHandler;
@@ -2663,7 +2821,9 @@ public class ClassSon extends ClassFather {
 ```
 
 - Test
+
 ```java
+
 package com.suplin;
 
 /**
@@ -2693,7 +2853,9 @@ public class Test {
 
 ### 引用数据类型比较
 在堆里面的东西进行比较,则会不同,例如
+
 ```java
+
 String a = new String("a");
 String b = new String("b");
 System.out.println(a == b);
@@ -2702,7 +2864,9 @@ System.out.println(a == b);
 false
 ```
 但是有一个例外:
+
 ```java
+
 String a ="a";
 String b ="a";
 System.out.println(a == b);
@@ -2715,7 +2879,9 @@ true
 - 但是 equals 不能满足 子类的需求,就需要在父类那里重写 equals .
 
 1. 在父类里头创建一个属性,然后快捷添加 set和get 然后弄一个 构造方法
-   ```java
+   
+```java
+
     public Father(String hobby) {
         this.hobby = hobby;
     }
@@ -2733,14 +2899,18 @@ true
   ```
 
 2. 在子类里头 就直接继承父类就行了 弄一个构造方法 然后super一下
-   ```java
+   
+```java
+
     public Son(String hobby) {
         super(hobby);
     }
   ```
 
 3. 然后就需要在father里头重写 equals 方法了
-   ```java
+   
+```java
+
     @Override
     public boolean equals(Object obj) {
 
@@ -2765,7 +2935,9 @@ true
     3. this 指的是使用这个方法的 对象
    
 4. test
-   ```java
+   
+```java
+
     package com.suplin;
 
     /**
@@ -2788,6 +2960,7 @@ true
     }
 
    ```
+
    ```cmd
     false
     true
@@ -2828,7 +3001,9 @@ true
 ### 接口
 - 如果这个类所有的方法都是抽象方法,那么这个类就叫接口
 - 接口的模板:
-  ```java
+  
+```java
+
     public interface Animal(){
         /*
          * 定义了呼吸
@@ -2844,7 +3019,9 @@ true
 
     }
   ```
-  ```java
+  
+```java
+
   public class Cat implements Animal(){
       @Override
       public void breathe(){
@@ -2856,7 +3033,9 @@ true
       }
   }
   ```
-  ```java
+  
+```java
+
   public class Dog implements Animal(){
       @Override
       public void breathe(){
@@ -2868,7 +3047,9 @@ true
       }
   }
   ```
-  ```java
+  
+```java
+
     public static void main(String[] args) {
         // 或者 Animal animal = new Cat();
         // 直接改后面子代的类名,后面的方法不用变,拓展性很强
@@ -2884,7 +3065,9 @@ true
 
 - Node(链表------数据结构)
   
+
 ```java
+
 /**
  * @author 林一
  * @data 2021/4/29
@@ -2938,7 +3121,9 @@ public class Node {
 
 - Super
   
+
 ```java
+
 /**
  * @author 林一
  * @data 2021/4/29
@@ -2958,7 +3143,9 @@ public interface Super<T> {
 
 - SuperArray
 
+
 ```java
+
 /**
  * @author 林一
  * @data 2021/4/27
@@ -3057,7 +3244,9 @@ public class SuperArray<T> implements Super<T> {
 
 ```
 - SuperLink
+
 ```java
+
 /**
  * @author 林一
  * @data 2021/4/29
@@ -3225,7 +3414,9 @@ public class SuperLink<T> implements Super<T> {
 # 内部类
 在类里面写个类,定义成private static,让其变成只能本类用的类
 - 使用
+
 ```java
+
 // 非静态内部类
 SuperLink superlink = new SuperLink();
 SuperLink.Node node = superlink.new Node();
@@ -3238,7 +3429,9 @@ SuperLink.Node node = new SuperLink.Node();
 - 正常本来应该写这个结构的
 ![](./sige.jpg)<br>
 - 然后本应该在Test里面写这个
+
 ```java
+
 public class Test {
     public static void main(String[] args) {
         Boy boy = new Boy();
@@ -3251,7 +3444,9 @@ public class Test {
 - 换成内部类  可以:
     - 把CuiCui写进Test里头
     - 就是这样
-    ```java
+    
+```java
+
     public class Test {
     public static void main(String[] args) {
         Boy boy = new Boy();
@@ -3265,19 +3460,21 @@ public class Test {
         }
     }
     }
-    ```
+```
 
 - 换成匿名内部类  也可以
     - 压根不需要写CuiCui类来继承
     - 可以直接new 一个 接口( 一般new 一个对象是没有右面的代码块的,但是这里的匿名对象类有)
-    ```java
+    
+```java
+
     Girl girl  = new Girl() {
         @Override
         public String name() {
             return "翠翠";
         }
     };
-    ```
+```
     - 然后就可以直接将 girl 传进married 里头
     - 这就是匿名内部类
 
@@ -3303,7 +3500,9 @@ FILO(first in last out) -----> 栈
 - 文件结构
   ![](./bank.jpg)
 - Bank
-  ```java
+  
+```java
+
     package newSuper.src.com.suplin;
 
     import java.util.Scanner;
@@ -3340,7 +3539,9 @@ FILO(first in last out) -----> 栈
   ```
 
 - Queue
-  ```java
+  
+```java
+
     package newSuper.src.com.suplin;
 
     import newSuper.src.SuperArray;
@@ -3381,7 +3582,9 @@ FILO(first in last out) -----> 栈
   ```
 
 - Stack
-  ```java
+  
+```java
+
     package newSuper.src.com.suplin;
 
     import newSuper.src.SuperArray;
@@ -3419,10 +3622,14 @@ FILO(first in last out) -----> 栈
 - 快捷键:
   - `psfi` 为int 类型
   - `psfs` 为String 类型
-- ```java
+
+
+```java
+
     public static final int AGE = 2;
     public static final String NAME = "linhui";
   ```
+
 ## static 
 - 如果定义成属性,则该属性通常当作常量使用
 - 如果定义成方法,则该方法通常当作工具使用
@@ -3436,7 +3643,9 @@ FILO(first in last out) -----> 栈
 - ![](./lianxit.jpg)
 
 - Exercise
+
 ```java
+
     package com.suplin;
 
     import org.junit.Test;
@@ -3456,7 +3665,9 @@ FILO(first in last out) -----> 栈
 ```
 
 - TestExercise
+
 ```java
+
 package com.test;
 
 import com.suplin.Exercise;
@@ -3483,7 +3694,9 @@ public class ExerciseTest {
 
 ### ArrayList
 
+
 ```java
+
 List<Integer> list = new ArrayList<>();
 ```
 
@@ -3491,24 +3704,28 @@ List<Integer> list = new ArrayList<>();
 - 查看第几个序列号: list.get()
 - 删除第几个序列号: list.remove()
   - 如果要删除指定的数,则会有很多坑
-    ```java
+    
+```java
+
     // 如果使用for循环,判断里面的数字是不是这个,再删除,则是这样
     for (int i = 0; i < list.size(); i++) {
         if (list.get(i) == 7){
             list.remove(i);
         }
     }
-    ```
+```
   - 就会发现,如果两个连着的数字相同,只会删除一个,这是因为数组的方法里面,实现了如果删除一个,后面的数会往前挪,所以再遍历下一个的时候,实则遍历到原数组的下两个的那个数了,就跳跃了一个
   - 但是可以有一个方法,即指针前挪一个,即i--
-    ```java
+    
+```java
+
     for (int i = 0; i < list.size(); i++) {
         if (list.get(i) == 7){
             list.remove(i);
             i--;
         }
     }
-    ```
+```
 - 删除传进来的对象(但是如果要删除相同的值,就得在自制的方法中重写equals方法,因为equals默认比较的是内存地址): list.remove()
 - 删除集合(因为removeAll是顶级父类的方法,所以可以删除子类的东西): list.removeAll()
 - 删除全部: list.clear()
@@ -3526,13 +3743,19 @@ List<Integer> list = new ArrayList<>();
 `Map<String,Integer> map = new HashMap<>();`
 ### 常见的两个方法:
 - 添加:
-  ```java
+  
+```java
+
   map.put("林一",1);
   ```
+
 - 查找:
-  ```java
+  
+```java
+
   System.out.println(map.get("林一"));
   ```
+
 ### 数据结构---难点
 **数组 + 链表 + 红黑树** 相结合 , 现根据key值得hashCode转换成一个数值,然后这个数值余十六,余数一定是一个 0 - 15 的数<br>
 然后这个添加的对象就会到对应下标的**数组**内存中,查找时, 根据key的这么一套下来,找到这个位置中的东西就特别快<br>
@@ -3540,12 +3763,15 @@ List<Integer> list = new ArrayList<>();
 
 - 取余后,余数一样,就叫做hash碰撞
 - 利用增强for循环可以迭代出hashMap
-  ```java
+  
+```java
+
   for (Map.Entry entry : map.entrySet()){
         System.out.println(entry.getKey());
         System.out.println(entry.getValue());
     }
   ```
+
 - TreeMap
   - 数据结构时**红黑树**
   - 会按照字典序给key排序
@@ -3553,11 +3779,14 @@ List<Integer> list = new ArrayList<>();
 ## 集合--set
 - 跟hashMap的结构一样,但是只有一个key值,value值是默认的new Object().
 - 遍历,因为没有下标,所以跟hashMap一样,只能用增强for循环来打印
-  ```java
+  
+```java
+
     for (Integer i : hashset){
         System.out.println(i);
     }
   ```
+
 - TreeSet
   - 数据结构时**红黑树**
   - 会按照字典序给key排序
@@ -3565,7 +3794,9 @@ List<Integer> list = new ArrayList<>();
 ## 将list里的重复的值去掉
 
 ### 迭代进set里面
+
 ```java
+
 package com.test;
 
 import org.junit.Test;
@@ -3609,7 +3840,9 @@ public class sortTest {
 ```
 
 ### 直接将集合放进HashMap的构造器里面
+
 ```java
+
 Set<Integer> set = new HashSet<>(list);
 list
  = new ArrayList<>(set);
@@ -3622,15 +3855,20 @@ list
 # 迭代器
 可以用迭代器迭代任何集合
 1. 先拿到迭代器:(例如有一个list集合)
-   ```java
+   
+```java
+
    //    list.iterator().var---回车
     Iterator<Integer> iterator = list.iterator();
     // 如果是Map , 则是拿出一个一个节点来遍历
     // map.entrySet().iterator().var---回车
     Iterator<Map.Entry<String, Integer>> iterator = map.entrySet().iterator();
    ```
+
 2. 然后用while循环遍历
-   ```java
+   
+```java
+
     while (iterator.hasNext()){
         // iterator.next().var 回车
         Integer next = iterator.next();
@@ -3660,7 +3898,9 @@ list
 
 - 折半查找-----版本一:
   
+
 ```java
+
 package com.suplin;
 
 /**
@@ -3726,7 +3966,9 @@ public class BinarySearch {
 
 - 折半查找-----版本二:
   
+
 ```java
+
 package com.suplin;
 
 /**
@@ -3817,7 +4059,9 @@ public class BinarySearch {
 ## Date
 所在包: java.util
 - 打印当前时间: getTime()
-  ```java
+  
+```java
+
     Date date = new Date();
     long time = date.getTime();
 
@@ -3825,16 +4069,22 @@ public class BinarySearch {
     String format = sf.format(time);
     System.out.println(format);
   ```
+  
 ## Calendar
 因为不是public 所以不能直接new<br>
 - 获取时间 并增加两个月
-  ```java
+  
+```java
+
     Calendar calendar = Calendar.getInstance();
     calendar.add(Calendar.MONTH,2);
     System.out.println(calendar.getTime());
   ```
+
 - 格式化时间
-  ```java
+  
+```java
+
     Calendar calendar = Calendar.getInstance();
     System.out.println(calendar.getTime());
     
@@ -3842,14 +4092,19 @@ public class BinarySearch {
     String format = sf.format(calendar.getTime());
     System.out.println(format);
   ```
+
 - 设置日历
-  ```java
+  
+```java
+
   calendar.set(Calendar.YEAR,2022);
   ```
 
 # 单例
 ## 饿汉式单例
+
 ```java
+
 package com.suplin;
 
 /**
@@ -3879,7 +4134,9 @@ public class Date {
 
 ```
 ## 懒汉式单例
+
 ```java
+
 package com.suplin;
 
 /**
@@ -3902,7 +4159,9 @@ public class Singleton {
 ```
 
 # 计算每个单词出现的次数
+
 ```java
+
 package com.suplin;
 
 import java.util.HashMap;
@@ -3940,7 +4199,9 @@ public class CountWorld {
 ```
 
 # 归并思想
+
 ```java
+
 package com.suplin;
 
 import java.util.ArrayList;
@@ -4023,7 +4284,9 @@ public class NewInt {
 
 ![](./xiancheng.jpg) 
 - MyRun
-  ```java
+  
+```java
+
     package com.Thread;
 
     import java.util.Random;
@@ -4047,8 +4310,11 @@ public class NewInt {
     }
 
   ```
+
 - MyThread
-  ```java
+  
+```java
+
     package com.Thread;
 
     /**
@@ -4077,8 +4343,11 @@ public class NewInt {
     }
 
   ```
+
 - ThreadTest
-  ```java
+  
+```java
+
     package com.Thread;
 
     import com.Thread.MyRun;
@@ -4120,7 +4389,9 @@ public class NewInt {
 - ![](./anquanwenti.jpg)
   - 首先,下面的多线程是会越界报错的,并且数据也是不完全的
     - Fori
-    ```java
+    
+```java
+
     package com.suplin.Test;
 
     /**
@@ -4138,9 +4409,11 @@ public class NewInt {
         }
     }
 
-    ```
+```
     - ThreadTest
-    ```java
+    
+```java
+
     package com.suplin.Test;
 
     import java.util.ArrayList;
@@ -4178,10 +4451,12 @@ public class NewInt {
 
     }
 
-    ```
+```
   - 然后,如果继承的List 下面的`Vector`这个子类,则不会出错,他会让线程有顺序的执行
     - ThreadTest
-    ```java
+    
+```java
+
     package com.suplin.Test;
 
     import java.util.List;
@@ -4219,7 +4494,7 @@ public class NewInt {
 
     }
 
-    ```
+```
 
   - 原因:
     - 在类似`Vector`类里面,他的方法前有一个`synchronized` ,它可以让线程有序进行
@@ -4245,7 +4520,9 @@ public class NewInt {
   - 在方法名后边写`throws InterruptedException` 这个是把异常抛给调用他的其他方法
   - 在方法里面写`throw new *****` 则是单纯往外抛出一个异常
 - try
-  ```java
+  
+```java
+
     try {
         Thread.sleep(1000);
     } catch (InterruptedException e) {
@@ -4286,7 +4563,9 @@ public class NewInt {
 - 如果创建的目录有未被创建的目录,则: mkdirs()
 
 ## 拷贝文件
+
 ```java
+
 import org.junit.Test;
 
 import java.io.*;
@@ -4350,7 +4629,9 @@ public class CopyFile {
 
 ```
 ### 进度条版
+
 ```java
+
 import org.junit.Test;
 
 import java.io.*;
@@ -4430,7 +4711,9 @@ public class Copy {
 ```
 
 ## 读取文件
+
 ```java
+
 import org.junit.Test;
 
 import java.io.BufferedReader;
@@ -4494,7 +4777,9 @@ public class Read {
 ```
 
 ## 写入文件
+
 ```java
+
 import org.junit.Test;
 
 import java.io.*;
@@ -4588,7 +4873,9 @@ public class Writer {
 ### 序列化
 - 要在需要写入的对象后面实现`Serializable` 的接口,才能 序列化
 - User
-  ```java
+  
+```java
+
     package com.IOtest;
 
     import java.io.Serializable;
@@ -4611,8 +4898,11 @@ public class Writer {
     }
 
   ```
+
 - IOtest
-  ```java
+  
+```java
+
     package com.IOtest;
 
     import org.junit.Test;
@@ -4642,7 +4932,9 @@ public class Writer {
   ```
 
 ### 反序列化
+
 ```java
+
 @Test
 public void objectTest() throws IOException, ClassNotFoundException {
     FileInputStream fi = new FileInputStream("C:\\Users\\林一\\Desktop\\lin.txt");
@@ -4662,7 +4954,9 @@ public void objectTest() throws IOException, ClassNotFoundException {
   
 ![](./jianting.jpg)
 - QQServer
-  ```java
+  
+```java
+
     package com.suplin;
 
     import java.io.IOException;
@@ -4699,8 +4993,11 @@ public void objectTest() throws IOException, ClassNotFoundException {
     }
 
   ```
+
 - QQ
-  ```java
+  
+```java
+
     package com.suplin;
 
     import java.io.OutputStream;
@@ -4744,7 +5041,9 @@ public void objectTest() throws IOException, ClassNotFoundException {
 - <数据类型> ---> 只能是引用类型
 ## 泛型方法
 
+
 ```java
+
 package com.fanxing;
 
 /**
